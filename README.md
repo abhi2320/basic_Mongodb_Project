@@ -1,7 +1,7 @@
-User Management API with FastAPI and MongoDB
+### User Management API with FastAPI and MongoDB
 
 This project implements a set of APIs for user management using FastAPI and MongoDB. The API includes user registration, login, linking IDs, joining data from multiple collections, and chain deleting user data.
-I have done APIs testing in POSTMAN.
+I have done APIs testing using POSTMAN.
 
 
 Requirements
@@ -18,7 +18,7 @@ uvicorn: ASGI server to run FastAPI applications.
 python-dotenv: Library to manage environment variables.
 
 
-Setup
+## Setup
 
 Installation
 Create a Virtual Environment
@@ -34,8 +34,8 @@ Install Dependencies
 pip install fastapi pymongo bcrypt pydantic uvicorn python-dotenv
 
 
-API Endpoints
-Registration API
+### API Endpoints
+## Registration API
 Endpoint: /register
 Method: POST
 Description: Register a new user.
@@ -51,7 +51,7 @@ Response:
 }
 
 
-Login API
+## Login API
 Endpoint: /login
 Method: POST
 Description: Authenticate an existing user.
@@ -66,7 +66,7 @@ Response:
 }
 
 
-Linking ID API
+## Linking ID API
 Endpoint: /link-id
 Method: POST
 Description: Link an ID to a user's account.
@@ -80,19 +80,7 @@ Response:
   "message": "ID linked successfully."
 }
 
-Joins
-Endpoint: /join-data
-Method: GET
-Description: Join data from multiple collections.
-Query Parameters:
-collection1_id=string
-collection2_id=string
-Response:
-{
-  "data": "Joined data from multiple collections."
-}
-
-Chain Delete
+## Chain Delete
 Endpoint: /delete-user
 Method: DELETE
 Description: Delete a user and all associated data.
